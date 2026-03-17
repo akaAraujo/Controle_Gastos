@@ -256,4 +256,5 @@ C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gasto
 C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gastos\Controle_Gastos\obj\Debug\net8.0\ref\Controle_Gastos.dll
 C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gastos\Controle_Gastos\obj\Debug\net8.0\Controle_Gastos.RazorAssemblyInfo.cache
 C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gastos\Controle_Gastos\obj\Debug\net8.0\Controle_Gastos.RazorAssemblyInfo.cs
+C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gastos\Controle_Gastos\obj\Debug\net8.0\Controle_Gastos.sourcelink.json
 C:\Users\silve\OneDrive\Área de Trabalho\Controle_Gastos\backend\Controle_Gastos\Controle_Gastos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

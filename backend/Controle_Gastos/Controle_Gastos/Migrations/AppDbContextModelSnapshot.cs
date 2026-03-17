@@ -58,9 +58,6 @@ namespace Controle_Gastos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -79,7 +76,7 @@ namespace Controle_Gastos.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriaId");
+                    b.HasIndex("IdCategoria");
 
                     b.HasIndex("IdPessoa");
 
@@ -89,9 +86,9 @@ namespace Controle_Gastos.Migrations
             modelBuilder.Entity("Controle_Gastos.Models.Transacao", b =>
                 {
                     b.HasOne("Controle_Gastos.Models.Categoria", "Categoria")
-                        .WithMany()
-                        .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("Transacoes")
+                        .HasForeignKey("IdCategoria")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Controle_Gastos.Models.Pessoa", "Pessoa")
@@ -103,6 +100,11 @@ namespace Controle_Gastos.Migrations
                     b.Navigation("Categoria");
 
                     b.Navigation("Pessoa");
+                });
+
+            modelBuilder.Entity("Controle_Gastos.Models.Categoria", b =>
+                {
+                    b.Navigation("Transacoes");
                 });
 
             modelBuilder.Entity("Controle_Gastos.Models.Pessoa", b =>

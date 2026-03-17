@@ -11,5 +11,8 @@
 
         // Finalidade da categoria
         public FinalidadeCategoria Finalidade { get; set; }
+
+        // Lista de transações da categoria
+        public List<Transacao> Transacoes { get; set; } = new();
     }
 }

@@ -295,11 +295,11 @@
           "tipo": {
             "$ref": "#/components/schemas/TipoTransacao"
           },
-          "idCategoria": {
+          "categoriaId": {
             "type": "integer",
             "format": "int32"
           },
-          "idPessoa": {
+          "pessoaId": {
             "type": "integer",
             "format": "int32"
           }

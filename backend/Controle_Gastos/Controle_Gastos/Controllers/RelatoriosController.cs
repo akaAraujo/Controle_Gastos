@@ -29,14 +29,14 @@ namespace Controle_Gastos.Controllers
                     PessoaNome = p.Nome,
 
                     // Soma das receitas das pessoas
-                    TotalRenda = p.Transacoes
+                    TotalRenda = (decimal)(p.Transacoes
                         .Where(t => t.Tipo == TipoTransacao.Receita)
-                        .Sum(t => (decimal?)t.Valor) ?? 0,
+                        .Sum(t => (double?)t.Valor) ?? 0),
                     
                     // Soma das despesas das pessoas
-                    TotalDespesas = p.Transacoes
+                    TotalDespesas = (decimal)(p.Transacoes
                         .Where(t => t.Tipo == TipoTransacao.Despesa)
-                        .Sum(t => (decimal?)t.Valor) ?? 0
+                        .Sum(t => (double?)t.Valor) ?? 0)
                 }).ToListAsync();
 
             // Calcula o saldo (receitas - despesas)
@@ -80,13 +80,13 @@ namespace Controle_Gastos.Controllers
                     CategoriaId = c.Id,
                     CategoriaDescricao = c.Descricao,
 
-                    TotalReceita = _context.Transacoes
+                    TotalReceita = (decimal)(_context.Transacoes
                         .Where(t => t.IdCategoria == c.Id && t.Tipo == TipoTransacao.Receita)
-                        .Sum(t => (decimal?)t.Valor) ?? 0,
+                        .Sum(t => (double?)t.Valor) ?? 0),
 
-                    TotalDespesas = _context.Transacoes
+                    TotalDespesas = (decimal)(_context.Transacoes
                         .Where(t => t.IdCategoria == c.Id && t.Tipo == TipoTransacao.Despesa)
-                        .Sum(t => (decimal?)t.Valor) ?? 0
+                        .Sum(t => (double?)t.Valor) ?? 0)
                 }).ToListAsync();
 
             var resultado = dados.Select(c => new

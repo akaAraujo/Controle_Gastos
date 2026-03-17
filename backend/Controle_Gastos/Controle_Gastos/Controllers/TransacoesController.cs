@@ -50,8 +50,8 @@ namespace Controle_Gastos.Controllers
                     Descricao = dto.Descricao,
                     Valor = dto.Valor,
                     Tipo = dto.Tipo,
-                    IdCategoria = dto.IdCategoria,
-                    IdPessoa = dto.IdPessoa
+                    IdCategoria = dto.CategoriaId,
+                    IdPessoa = dto.PessoaId
                 };
 
 
@@ -64,7 +64,7 @@ namespace Controle_Gastos.Controllers
             catch (Exception ex)
             {
                 // Caso ocorra algum problema será retornada uma exessão
-                return BadRequest(ex.Message);
+                return BadRequest(ex.ToString());
             }
         }
     }

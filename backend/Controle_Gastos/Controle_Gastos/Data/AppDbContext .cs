@@ -28,6 +28,16 @@ namespace Controle_Gastos.Data
                 .HasForeignKey(t => t.IdPessoa)
                 // Faz com que ao deletar uma pessoa as transações também sejam apagadas
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // Relacionamento Categoria -> Transações
+            modelBuilder.Entity<Transacao>()
+                // Define que cada transação tem uma categoria
+                .HasOne(t => t.Categoria)
+                // Define que uma categoria tem várias transações
+                .WithMany(c => c.Transacoes)
+                // Define o IdCategoria como uma FK
+                .HasForeignKey(t => t.IdCategoria)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

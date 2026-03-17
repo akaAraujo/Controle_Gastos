@@ -23,9 +23,9 @@ namespace Controle_Gastos.DTO
         public TipoTransacao Tipo { get; set; }
 
         // Id da categoria
-        public int IdCategoria { get; set; }
+        public int CategoriaId { get; set; }
 
         // Id da pessoa
-        public int IdPessoa { get; set; }
+        public int PessoaId { get; set; }
     }
 }
