@@ -4,8 +4,6 @@
 ![React](https://img.shields.io/badge/React-18-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)
-![Status](https://img.shields.io/badge/status-finalizado-success)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 Sistema completo para gerenciamento de gastos e receitas de pessoas, desenvolvido como teste técnico utilizando .NET e React.
 
@@ -54,33 +52,6 @@ O projeto foi dividido em duas partes principais:
 
 ---
 
-## 📊 Modelo de Dados
-
-### Pessoa
-- Id (auto gerado)  
-- Nome (máx. 200 caracteres)  
-- Idade  
-
-### Categoria
-- Id (auto gerado)  
-- Descrição (máx. 400 caracteres)  
-- Finalidade:  
-  - Despesa  
-  - Receita  
-  - Ambas  
-
-### Transação
-- Id (auto gerado)  
-- Descrição (máx. 400 caracteres)  
-- Valor (positivo)  
-- Tipo:  
-  - Despesa  
-  - Receita  
-- Categoria (FK)  
-- Pessoa (FK)  
-
----
-
 ## 🔁 Fluxo de Funcionamento
 
 ### 1. Cadastro de Pessoa
@@ -106,15 +77,18 @@ O sistema calcula:
 - Total de receitas por pessoa  
 - Total de despesas por pessoa  
 - Saldo (receitas - despesas)  
-- Total geral consolidado  
+- Total geral consolidado
+- Total por categoria
 
 ---
 
 ## 📡 Endpoints principais da API
 
 ### Pessoas
-- `GET /api/pessoas`  
-- `POST /api/pessoas`  
+- `GET /api/pessoas`
+- `GET /api/pessoas/{id}` 
+- `POST /api/pessoas`
+- `PUT /api/pessoas/{ip}`
 - `DELETE /api/pessoas/{id}`  
 
 ### Categorias
@@ -126,7 +100,8 @@ O sistema calcula:
 - `POST /api/transacoes`  
 
 ### Relatórios
-- `GET /api/reports/pessoas`  
+- `GET /api/reports/pessoas`
+- `GET /api/reports/categorias`  
 
 ---
 
@@ -144,11 +119,30 @@ O sistema calcula:
 
 1. Acesse a pasta do backend:
 
-```bash
+```bash 
 cd backend
+```
+2. Restaure as dependências:
+```bash 
 dotnet restore
+```
+3. Execute o projeto:
+```bash 
 dotnet run
+```
+
+## ▶️ Executando o Front-end
+
+1. Acesse a pasta do frontend:
+
+```bash 
 cd frontend
+```
+2. Instale as dependências:
+```bash 
 npm install
+```
+3. Execute a aplicação:
+```bash 
 npm start
 ```
