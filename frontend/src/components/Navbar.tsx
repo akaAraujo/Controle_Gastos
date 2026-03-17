@@ -6,7 +6,8 @@ export default function Navbar() {
       <Link to="/">Pessoas</Link> | 
       <Link to="/categorias">Categorias</Link> | 
       <Link to="/transacoes">Transações</Link> | 
-      <Link to="/totais">Totais</Link>
+      <Link to="/totais">Totais</Link> | 
+      <Link to="/totais-categoria">Totais por Categoria</Link>
     </nav>
   );
 }

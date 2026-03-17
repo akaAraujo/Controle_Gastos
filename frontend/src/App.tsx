@@ -3,6 +3,7 @@ import Pessoas from "./pages/Pessoas";
 import Categorias from "./pages/Categorias";
 import Transacoes from "./pages/Transacoes";
 import TotaisPessoa from "./pages/TotaisPessoa";
+import TotaisCategoria from "./pages/TotaisCategoria";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="/totais" element={<TotaisPessoa />} />
 
+        <Route path="/totais-categoria" element={<TotaisCategoria />} />
       </Routes>
 
     </BrowserRouter>
