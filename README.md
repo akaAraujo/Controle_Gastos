@@ -1,4 +1,4 @@
-# 💰 Controle de Gastos Residenciais
+# 💰 Controle de Gastos
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-blue)
 ![React](https://img.shields.io/badge/React-18-blue)
@@ -11,7 +11,7 @@ Sistema completo para gerenciamento de gastos e receitas de pessoas, desenvolvid
 
 ## 📌 Objetivo
 
-O objetivo do projeto é permitir o controle financeiro de um ambiente residencial, possibilitando:
+O objetivo do projeto é permitir o controle financeiro, possibilitando:
 
 - Cadastro de pessoas
 - Cadastro de categorias
